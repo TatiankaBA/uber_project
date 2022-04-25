@@ -18,15 +18,20 @@
         .subheader_phone
             font-size: 18px
     .footer
-        &_links
-            width: 330px
-        &_wrapper
-            > div:nth-child(3)
-                width: 25%
-            > div:nth-child(2)
-                width: 40%
-            > div:nth-child(1)
-                width: 25% 
+      &_wrapper > div 
+        width: 50%
+        &:nth-child(1)
+          width: 25%
+        &:nth-child(3)
+          width: 25%
+          display: flex 
+          justify-content: flex-end
+      &_mobile
+        display: flex
+        a 
+          margin: 0 3px
+          img 
+            width: 100%
 
 
 @media (max-width: 991px)
@@ -45,26 +50,29 @@
             height: 40px
             margin-top: 21px
     .footer
-        &_links
-            width: 310px
-        &_wrapper
-            > div:nth-child(3)
-                width: 25%
-            > div:nth-child(2)
-                width: 44%
-            > div:nth-child(1)
-                width: 22% 
+      &_wrapper
+        flex-wrap: wrap
+      &_wrapper > div 
+        width: 100%
+        display: flex 
+        justify-content: center
+        margin-bottom: 20px
+        &:nth-child(1)
+          width: 100%
+        &:nth-child(3)
+          width: 100%
+          justify-content: center
     .mobile 
-        padding-bottom: 30px
-        min-height: 810px
-        &_item
-            width: 210px
-            height: 210px
-            &_subtitle
-                font-size: 15px
-            &_plus
-                position: absolute
-                bottom: 25px
+      padding-bottom: 30px
+      min-height: 810px
+      &_item
+        width: 210px
+        height: 210px
+        &_subtitle
+          font-size: 15px
+          &_plus
+            position: absolute
+            bottom: 25px
     .features
         .feature_card
             flex-direction: column
@@ -97,7 +105,7 @@
                 font-size: 15px
                 font-weight: 400
     .hamburger
-        display:block
+        display: block
         position: absolute
         right: 10px
         top: 50%
@@ -155,21 +163,6 @@
             font-size: 12px
             height: 40px
             margin-top: 10px
-    .footer
-        &_wrapper
-            flex-direction: column
-            justify-content: center
-            > div
-                width: 100%
-            > div:nth-child(3)
-                order: 3
-            > div:nth-child(2)
-                order: 1
-            > div:nth-child(1)
-                order: 2
-        &_mobile
-            img
-                display: inline-block 
 @media (max-width: 575px)
     .subheader
         min-height: 60px
@@ -184,7 +177,7 @@
         .subheader_btn
             width: 110px
             height: 22px
-            font-size: 10px
+            font-size: 8px
             margin-top: 9px
     .promo
         padding-top: 102px
@@ -240,6 +233,57 @@
     .features
         .feature_round
             margin-right: 0
+    .menu
+        width: 100%
+        z-index: 1
+        padding: 0
+        &_item
+            width: 100%
+            &_link
+                display: block
+                width: 100%
+                text-align: center
+                padding: 10px
+                font-size: 16px
+    .hamburger
+        z-index: 2
+    footer 
+      padding: 25px 0 20px 0
+    .footer 
+      &_divider
+        width: 253px
+        margin: 0 auto
+      &_wrapper
+        padding-top: 22px
+      &_wrapper 
+        > div 
+          margin-bottom: 20px
+        &:nth-child(1)
+          order: 2
+        &:nth-child(2)
+          order: 1
+        &:nth-child(3)
+          order: 3
+      &_links 
+        width: 290px  
+        &_main 
+          padding: 0
+          font-size: 14px
+        &_sub 
+          flex-wrap: wrap
+          justify-content: center
+          a 
+            margin: 0 7px
+        &_lang 
+          margin-top: 10px
+    .require
+      min-height: 400px
+      padding-top: 30px
+      padding-bottom: 0
+    .world
+      min-height: 400px
+      padding-top: 30px
+      padding-bottom: 30px
 
 
         
